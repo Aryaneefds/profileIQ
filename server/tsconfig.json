@@ -15,14 +15,7 @@
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
-    "moduleResolution": "node",
-    "types": [
-      "node",
-      "express",
-      "jsonwebtoken",
-      "bcryptjs",
-      "cors"
-    ]
+    "moduleResolution": "node"
   },
   "include": [
     "src/**/*"
