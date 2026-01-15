@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Card, CardHeader, Button, Modal, Input, Select, Textarea } from '../../components/ui';
+import { Card, Button, Modal, Input, Select, Textarea } from '../../components/ui';
 import { useActivities } from '../../hooks/useActivities';
 import { Activity } from '../../types';
 
@@ -36,7 +36,7 @@ const emptyForm = {
   endDate: '',
   hoursPerWeek: 5,
   leadershipRole: 'member',
-  initiativeLevel: 'participant' as const,
+  initiativeLevel: 'participant' as 'self-started' | 'co-led' | 'participant',
   measurableOutcomes: ''
 };
 
@@ -72,7 +72,7 @@ export default function StudentActivities() {
       endDate: activity.endDate ? activity.endDate.split('T')[0] : '',
       hoursPerWeek: activity.hoursPerWeek,
       leadershipRole: activity.leadershipRole,
-      initiativeLevel: activity.initiativeLevel,
+      initiativeLevel: activity.initiativeLevel as 'self-started' | 'co-led' | 'participant',
       measurableOutcomes: activity.measurableOutcomes || ''
     });
     setEditingId(activity._id);
