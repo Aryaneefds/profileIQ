@@ -22,7 +22,7 @@ function ScoreCard({ label, score, explanation }: { label: string; score: number
 }
 
 export default function StudentEvaluation() {
-  const { evaluation, loading, error, fetchLatest, triggerEvaluation } = useEvaluation();
+  const { evaluation, loading, fetchLatest, triggerEvaluation } = useEvaluation();
   const { activities } = useActivities();
   const [evaluating, setEvaluating] = useState(false);
   const [evalError, setEvalError] = useState('');

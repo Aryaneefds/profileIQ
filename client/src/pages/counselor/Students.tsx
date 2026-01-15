@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Card, CardHeader, Input, Button } from '../../components/ui';
+import { Card, Input, Button } from '../../components/ui';
 import api from '../../services/api';
 import { CounselorStudent } from '../../types';
 
@@ -8,9 +8,6 @@ export default function CounselorStudents() {
   const [students, setStudents] = useState<CounselorStudent[]>([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState('');
-  const [assignEmail, setAssignEmail] = useState('');
-  const [assigning, setAssigning] = useState(false);
-  const [assignError, setAssignError] = useState('');
 
   useEffect(() => {
     api.get('/counselors/students')
@@ -24,23 +21,7 @@ export default function CounselorStudents() {
     s.profile?.lastName?.toLowerCase().includes(search.toLowerCase())
   );
 
-  const handleAssign = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setAssigning(true);
-    setAssignError('');
 
-    try {
-      // First find user by email, then assign
-      const userRes = await api.get(`/auth/me`); // This is just for demo - in production you'd need a search endpoint
-      // For now, we'll just show the UI - actual assignment would need an admin endpoint
-      setAssignEmail('');
-      setAssignError('Student assignment requires admin access');
-    } catch (err: any) {
-      setAssignError(err.response?.data?.error || 'Failed to assign student');
-    } finally {
-      setAssigning(false);
-    }
-  };
 
   if (loading) {
     return (
