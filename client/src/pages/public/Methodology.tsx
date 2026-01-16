@@ -105,27 +105,37 @@ export default function Methodology() {
           <div className="space-y-3">
             <div className="flex items-center gap-4">
               <div className="w-20 text-right font-mono font-semibold text-gray-900">85-100</div>
-              <div className="flex-1 h-4 bg-green-500 rounded" style={{ width: '15%' }} />
+              <div className="w-48 bg-gray-200 rounded h-4">
+                <div className="h-4 bg-green-500 rounded" style={{ width: '100%' }} />
+              </div>
               <div className="text-sm text-gray-600">Exceptional - Top tier profiles</div>
             </div>
             <div className="flex items-center gap-4">
               <div className="w-20 text-right font-mono font-semibold text-gray-900">70-84</div>
-              <div className="flex-1 h-4 bg-green-400 rounded" style={{ width: '20%' }} />
+              <div className="w-48 bg-gray-200 rounded h-4">
+                <div className="h-4 bg-green-400 rounded" style={{ width: '84%' }} />
+              </div>
               <div className="text-sm text-gray-600">Strong - Well-developed profiles</div>
             </div>
             <div className="flex items-center gap-4">
               <div className="w-20 text-right font-mono font-semibold text-gray-900">50-69</div>
-              <div className="flex-1 h-4 bg-yellow-400 rounded" style={{ width: '40%' }} />
+              <div className="w-48 bg-gray-200 rounded h-4">
+                <div className="h-4 bg-yellow-400 rounded" style={{ width: '69%' }} />
+              </div>
               <div className="text-sm text-gray-600">Average - Typical student profile</div>
             </div>
             <div className="flex items-center gap-4">
               <div className="w-20 text-right font-mono font-semibold text-gray-900">30-49</div>
-              <div className="flex-1 h-4 bg-orange-400 rounded" style={{ width: '20%' }} />
+              <div className="w-48 bg-gray-200 rounded h-4">
+                <div className="h-4 bg-orange-400 rounded" style={{ width: '49%' }} />
+              </div>
               <div className="text-sm text-gray-600">Developing - Room for growth</div>
             </div>
             <div className="flex items-center gap-4">
               <div className="w-20 text-right font-mono font-semibold text-gray-900">0-29</div>
-              <div className="flex-1 h-4 bg-red-400 rounded" style={{ width: '5%' }} />
+              <div className="w-48 bg-gray-200 rounded h-4">
+                <div className="h-4 bg-red-400 rounded" style={{ width: '29%' }} />
+              </div>
               <div className="text-sm text-gray-600">Limited - Early stage or insufficient data</div>
             </div>
           </div>

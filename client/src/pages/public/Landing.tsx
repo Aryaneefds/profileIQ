@@ -15,7 +15,7 @@ export default function Landing() {
           </h1>
           <p className="mt-6 text-xl text-gray-600 max-w-2xl mx-auto">
             ProfileIQ provides standardized, AI-powered evaluation of extracurricular activities,
-            leadership, and real-world impact. Think SAT, but for everything else.
+            leadership, and real-world impact. Think JEE, but for everything else.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/signup">
