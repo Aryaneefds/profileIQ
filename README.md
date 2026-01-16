@@ -7,7 +7,7 @@ A MERN stack SaaS platform that provides standardized, AI-powered evaluation of 
 - **Frontend**: React + TypeScript + Tailwind CSS + Recharts
 - **Backend**: Node.js + Express + TypeScript
 - **Database**: MongoDB
-- **AI**: Claude API (Anthropic)
+- **AI**: GEMINI API 
 
 ## Project Structure
 
@@ -39,7 +39,7 @@ profileIQ/
 
 - Node.js 18+
 - MongoDB (local or Atlas)
-- Anthropic API key
+- Gemini API key
 
 ### Environment Variables
 
@@ -49,7 +49,7 @@ Create `.env` in the `server` directory:
 PORT=5000
 MONGODB_URI=mongodb://localhost:27017/profileiq
 JWT_SECRET=your-secret-key
-ANTHROPIC_API_KEY=your-anthropic-api-key
+GEMINI_API_KEY=your_gemini_key
 NODE_ENV=development
 ```
 
