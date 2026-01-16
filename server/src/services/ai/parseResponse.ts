@@ -1,4 +1,4 @@
-import { AIResponse } from './callClaude';
+import { AIResponse } from './callGemini';
 
 export function validateAIResponse(response: unknown): response is AIResponse {
   if (!response || typeof response !== 'object') return false;
