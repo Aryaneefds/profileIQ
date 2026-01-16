@@ -1,6 +1,6 @@
 import { IUser, IActivity, ICounselorNote, IActivitySnapshot, IStudentContext } from '../../models';
 import { buildPayload } from './buildPayload';
-import { callClaude, AIResponse } from './callClaude';
+import { callGemini, AIResponse } from './callGemini';
 import { validateAIResponse } from './parseResponse';
 
 export interface EvaluationResult {
@@ -104,7 +104,7 @@ export async function evaluate(
   }
 
   const payload = buildPayload(user.profile, activities, counselorNotes);
-  const { response, responseTimeMs, model } = await callClaude(payload);
+  const { response, responseTimeMs, model } = await callGemini(payload);
 
   if (!validateAIResponse(response)) {
     throw new Error('Invalid AI response format');
@@ -114,5 +114,5 @@ export async function evaluate(
 }
 
 export { buildPayload } from './buildPayload';
-export { callClaude, AIResponse } from './callClaude';
+export { callGemini, AIResponse } from './callGemini';
 export { validateAIResponse } from './parseResponse';
