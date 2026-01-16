@@ -47,7 +47,7 @@ export async function callClaude(payload: object): Promise<{ response: AIRespons
 
   const responseTimeMs = Date.now() - startTime;
 
-  const textBlock = message.content.find(block => block.type === 'text');
+  const textBlock = message.content.find((block) => block.type === 'text');
   if (!textBlock || textBlock.type !== 'text') {
     throw new Error('No text response from AI');
   }
